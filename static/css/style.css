@@ -210,7 +210,7 @@ a {
     }
     
     .terminal {
-        height: 600px;
+        height: 90vh;
     }
     
     .welcome-text, .ascii-owl {
