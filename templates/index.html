@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="terminal">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="close"></span>
+                <span class="minimize"></span>
+                <span class="maximize"></span>
+            </div>
+            <div class="terminal-title">guest@portfolio:~</div>
+        </div>
+        <div class="terminal-body" id="terminal">
+            <div class="output" id="output">
+                <pre class="ascii-owl">
+          __________-------____                 ____-------__________
+          \------____-------___--__---------__--___-------____------/
+           \//////// / / / / / \   _-------_   / \ \ \ \ \ \\\\\\\\/
+             \////-/-/------/_/_| /___   ___\ |_\_\------\-\-\\\\/
+               --//// / /  /  //|| (O)\ /(O) ||\\  \  \ \ \\\\--
+                    ---__/  // /| \_  /V\  _/ |\ \\  \__---
+                         -//  / /\_ ------- _/\ \  \\-
+                           \_/_/ /\---------/\ \_\_/
+                               ----\   |   /----
+                                    | -|- |
+                                   /   |   \
+                                  |___/ \___|
+                </pre>
+                <div class="command-output">
+                    <p>Welcome to my interactive portfolio!</p>
+                    <p>Type <span class="command">help</span> to see available commands.</p>
+                </div>
+            </div>
+            <div class="input-line">
+                <span class="prompt">guest@portfolio:~$</span>
+                <input type="text" class="command-input" id="commandInput" autofocus>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
