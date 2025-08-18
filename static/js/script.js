@@ -80,18 +80,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function clearTerminal() {
         output.innerHTML = `
             <pre class="ascii-owl">
-          __________-------____                 ____-------__________
-          \\------____-------___--__---------__--___-------____------/
-           \\//////// / / / / / \\   _-------_   / \\ \\ \\ \\ \\ \\\\\\\\\\\\\\\\/
-             \\////-/-/------/_/_| /___   ___\\ |_\\_\\------\\-\\-\\\\\\\\/
-               --//// / /  /  //|| (O)\\ /(O) ||\\\\  \\  \\ \\ \\\\\\\\--
-                    ---__/  // /| \\_  /V\\  _/ |\\ \\\\  \\__---
-                         -//  / /\\_ ------- _/\\ \\  \\\\-
-                           \\_/_/ /\\---------/\\ \\_\\_/
-                               ----\\   |   /----
-                                    | -|- |
-                                   /   |   \\
-                                  |____/\\___|
+ (o.o)
+ /)__)
+-"--"-
             </pre>
             <div class="command-output">
                 <p>Welcome to my interactive portfolio!</p>
@@ -140,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 responseElement.innerHTML = `
                     <ul class="links-list">
                         ${response.content.map(item => `
-                            <li><a href="${item.url}" target="_blank" rel="noopener noreferrer">${item.text}</a></li>
+                            <li><a href="${item.url}" target="_blank" rel="noopener noreferrer" ${item.download ? 'download' : ''}>${item.text}</a></li>
                         `).join('')}
                     </ul>`;
                 break;

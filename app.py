@@ -24,15 +24,18 @@ COMMANDS = {
 help --------- Show this help message
 about -------- Who I am and what I do
 reveal-face -- If you wanna see me!
+education ---- Where i studied, my grades etc.
+research ----- My research works during graduation.
 projects ----- My featured projects
 contact ------ How to reach me
 clear -------- Clear the terminal
 joke --------- Get a tech joke
 resume ------- View/download my resume
 skills ------- My technical skills matrix
+hobby -------- Who knows, we may have things in common!
+achievement -- Ah! My glorious days.
 secret ------- 🤫 Try and see
 motivate ----- Get a motivational quote
-asciiart ----- Show cool ASCII art
 weather  ----- Check local weather (simulated)
 """,
         }
@@ -43,7 +46,7 @@ weather  ----- Check local weather (simulated)
             "type": "mixed",
             "content": [
                 {"type": "text", "content": "## About Me\nFull-stack developer, Linux enthusiast, and problem solver."},
-                {"type": "text", "content": "### Skills:\n- Python\n- HTML+CSS+JS\n- Linux Server management\n- CI/CD\n- Web scrapping & automations\n"}
+                {"type": "text", "content": "### Details:\nHi there, I am a passionate STEM engineer who loves to work in both hardware and software divisions. With a view to sustainable green solution, I aim to integrate hardware and software for better optimization. My academic background provided me a solid knowledge about materials and various tools. I have done several nano-particle synthesis and characterization processes during my academics. On the other hand, my passion took me to the path of programming. I have crawled from design to code via a Cybersecurity path. Through which I have learned Web Development, Automation, Artificial Intelligence, and Cybersecurity.\n"}
             ]
         }
     },
@@ -53,6 +56,28 @@ weather  ----- Check local weather (simulated)
             "type": "mixed",
             "content": [
                 {"type": "image", "url": "/static/images/founder.jpg", "alt": "My Photo"}
+            ]
+        }
+    },
+    "education": {
+        "description": "Show educational info",
+        "response": {
+            "type": "mixed",
+            "content": [
+                {"type": "text", "content": "## Current status (B.Sc Graduate)"},
+                {"type": "text", "content": "### School:\nGorai High School\nTangail, Bangladesh.\nPassing Year: 2015\nGPA: 5.00/5.00\n\n"},
+                {"type": "text", "content": "### School:\nSt. Joseph Higher Secondary School\nDhaka, Bangladesh.\nPassing Year: 2017\nGPA: 5.00/5.00\n\n"},
+                {"type": "text", "content": "### University:\nB.Sc in Enginerring\nDepartment of Materials Science & Engineering\nUniversity of Rajshahi\nRajshahi, Bangladesh.\nPassing Year: 2024\nCGPA: 3.28\n\n"}
+            ]
+        }
+    },
+    "research": {
+        "description": "Show my research experiences",
+        "response": {
+            "type": "mixed",
+            "content": [
+                {"type": "text", "content": "### Eco Friendly Nano-Particle Synthesis using Food Waste\nTitle : Green Synthesis & Characterization of Ferrimagnetic Nickel Ferrite Nanoparticles Using Seed Extract of Phoenix Dactylifera for Biomedical Applications\nContribution: Expected ferrimagnetic NPs with good particle size and magnetic properties was achieved through several low temperature operations (less than 650℃ ). A formal presentation was presented before the board of faculties on this research.\n\n"},
+                {"type": "text", "content": "### Honey Synthesized Maghemite Nanoparticles for Hyperthermia Cancer Treatment\nTitle : Lychee Honey-Mediated Green Synthesis of Maghemite Nanoparticles for Potential Application in Cancer Hyperthermia Therapy.\nContribution: Provided assistantship to my lab-mate to complete his project. Used FESEM & other techniques to characterize which aligns with structural analysis and sustainable material synthesis theme.\n"},
             ]
         }
     },
@@ -109,8 +134,8 @@ weather  ----- Check local weather (simulated)
         "response": {
             "type": "links",
             "content": [
-                {"text": "📄 View Resume (PDF)", "url": "/static/docs/resume.pdf"},
-                {"text": "⬇️ Download Resume", "url": "/static/docs/resume.pdf", "download": True}
+                {"text": "📄 View Resume (PDF)", "url": "/static/docs/cv.pdf"},
+                {"text": "⬇️ Download Resume", "url": "/static/docs/cv.pdf", "download": True}
             ]
         }
     },
@@ -134,6 +159,32 @@ Pentesting : ███████░░░ 70%
 """
         }
     },
+    "hobby": {
+        "description": "Lets know some interests",
+        "response": {
+            "type": "text",
+            "content": """
+            🧳 Travelling
+            🏀 Basketball
+            🚲 Cycling
+            🚶‍♂️‍➡️ Hiking
+            📚 Reading books
+            🥷 Combat trainings
+            🚙 Long drive
+            🌱 Gardening
+            """
+        }
+    },
+    "achievement": {
+        "description": "Oh! My glorious days.",
+        "response": {
+            "type": "mixed",
+            "content": [
+                {"type": "text", "content": "Champion at Bangladesh Inter-University Basketball Tournament -2024\n\n"},
+                {"type": "text", "content": "Champion at Bangladesh Inter-University Basketball Tournament -2023"},
+            ]
+        }
+    },
     "secret": {
         "description": "🤫 Try and see",
         "response": {
@@ -141,14 +192,8 @@ Pentesting : ███████░░░ 70%
             "content": [
                 {"type": "text", "content": "Wanna know my secrets? 🎉"},
                 {"type": "text", "content": "Here are some secrets just for you:"},
-                {"type": "text", "content": """
-                (•_•)
-                I may look happy, but deep down, i need money. Only money can fix me.
-                """},
-                {"type": "text", "content": """
-                (•_•)
-                I love faluda, egg-fry, custard, sweets a lot.
-                """}
+                {"type": "text", "content": "I may look happy, but deep down, i need money. Only money can fix me."},
+                {"type": "text", "content": "I love faluda, egg-fry, custard, sweets a lot."}
             ]
         }
     },
@@ -159,31 +204,11 @@ Pentesting : ███████░░░ 70%
             "content": fetch_quote()
         }
     },
-    "asciiart": {
-        "description": "Show cool ASCII art",
-        "response": {
-            "type": "text",
-            "content": """
-            Here's some ASCII art for you:
-
-            ( ͡° ͜ʖ ͡°) uch approves your visit!
-            """
-        }
-    },
     "weather": {
         "description": "Check local weather (simulated)",
         "response": {
             "type": "text",
-            "content": """Current weather in Developerland:
-☀️  Sunny with a chance of bugs
-🌡️  72°F (22°C)
-💨  Light git pushes at 5 mph
-☕  Coffee index: High
-
-Weather forecast:
-Tomorrow: 🌧️  Rain of new features
-Weekend:  🚀  Perfect for side projects
-"""
+            "content": "Current weather in Developerland:\n ☀️ Sunny with a chance of bugs\n 🌡️ 72°F (22°C)\n 💨 Light git pushes at 5 mph\n ☕ Coffee index: High\n\n Weather forecast:\n Tomorrow: 🌧️ Rain of new features\n Weekend: 🚀 Perfect for side projects"
         }
     },
     "clear": {
