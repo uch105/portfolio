@@ -32,7 +32,7 @@ def chat():
     # 2. Fallback to ollama system call
     try:
         result = subprocess.run(
-            ["ollama", "run", MODEL_NAME, user_input],
+            ["/usr/local/bin/ollama", "run", MODEL_NAME, user_input],
             capture_output=True,
             text=True
         )
