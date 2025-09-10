@@ -222,6 +222,8 @@ ${message}
       messagesDiv.appendChild(typingDiv);
       messagesDiv.scrollTop = messagesDiv.scrollHeight;
       
+      let reply = "";
+      
       if (message.toLowerCase().includes("cv") || message.toLowerCase().includes("resume")) {
         typingDiv.remove();
         reply = `<br><br>📄 <a href="/download_cv" target="_blank">Download my CV</a>`;
@@ -240,7 +242,7 @@ ${message}
         typingDiv.remove();
 
         // Format response (links + newlines)
-        let reply = data.reply
+        reply = data.reply
           .replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank">$1</a>')
           .replace(/\n/g, "<br>");
         }
